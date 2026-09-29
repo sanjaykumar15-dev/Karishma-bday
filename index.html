@@ -50,7 +50,7 @@
       100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
     }
 
-    /* ── NAMED HEARTS (continuous flow, varying sizes, her name inside) ── */
+    /* ── NAMED HEARTS ── */
     .named-heart {
       position: absolute;
       bottom: -100px;
@@ -62,10 +62,7 @@
       animation: floatUpName linear forwards;
       will-change: transform, opacity;
     }
-    .named-heart .heart-shape {
-      color: var(--rose);
-      line-height: 1;
-    }
+    .named-heart .heart-shape { color: var(--rose); line-height: 1; }
     .named-heart .heart-label {
       position: absolute;
       color: #fff;
@@ -94,7 +91,6 @@
       padding: 60px 20px;
     }
 
-    /* ── PHOTO CAPTIONS (small romantic line under a photo) ── */
     .photo-caption {
       font-family: 'Dancing Script', cursive;
       color: var(--rose);
@@ -163,9 +159,7 @@
     }
 
     /* ── WISHES ── */
-    #wishes {
-      background: linear-gradient(160deg, #fff0f7 0%, #f7e8ff 100%);
-    }
+    #wishes { background: linear-gradient(160deg, #fff0f7 0%, #f7e8ff 100%); }
     .section-title {
       font-family: 'Pacifico', cursive;
       font-size: clamp(1.8rem, 5vw, 3rem);
@@ -202,43 +196,31 @@
     }
 
     /* ── GALLERY ── */
-    #gallery {
-      background: linear-gradient(160deg, #fce4ff 0%, #ffe0ec 100%);
+    #gallery { background: linear-gradient(160deg, #fce4ff 0%, #ffe0ec 100%); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px 14px;
+      max-width: 900px;
+      width: 100%;
     }
-   .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px 14px;
-    max-width: 900px;
-    width: 100%;
-}
-
-.gallery-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.gallery-item {
-    border-radius: 20px;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    box-shadow: 0 6px 20px rgba(255, 61, 127, 0.15);
-    transition: transform .3s;
-}
-
-.gallery-item:hover {
-    transform: scale(1.06) rotate(-1deg);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    object-position: center;
-    object-fit: contain;
-    display: block;
-}
+    .gallery-card { display: flex; flex-direction: column; align-items: center; }
+    .gallery-item {
+      border-radius: 20px;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 6px 20px rgba(255, 61, 127, 0.15);
+      transition: transform .3s;
+    }
+    .gallery-item:hover { transform: scale(1.06) rotate(-1deg); }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-position: center;
+      object-fit: contain;
+      display: block;
+    }
     .gallery-item .overlay {
       position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(255,61,127,.45), transparent);
@@ -258,17 +240,12 @@
       padding: 0 2px;
     }
 
-    /* ── CAROUSEL SECTION ── */
+    /* ── CAROUSEL ── */
     #carousel-section {
       background: linear-gradient(160deg, #fff0f7 0%, #fce4ff 100%);
       min-height: 80vh;
     }
-    .carousel-wrapper {
-      position: relative;
-      max-width: 500px;
-      width: 100%;
-      margin: 0 auto;
-    }
+    .carousel-wrapper { position: relative; max-width: 500px; width: 100%; margin: 0 auto; }
     .carousel-track {
       position: relative;
       border-radius: 28px;
@@ -276,9 +253,7 @@
       box-shadow: 0 20px 60px rgba(255,61,127,0.25);
       background: white;
     }
-    .carousel-slide {
-      display: none;
-    }
+    .carousel-slide { display: none; }
     .carousel-slide.active { display: block; }
     .carousel-slide img {
       width: 100%;
@@ -315,12 +290,7 @@
     }
     .carousel-prev { left: -24px; }
     .carousel-next { right: -24px; }
-    .carousel-dots {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 18px;
-    }
+    .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 18px; }
     .dot {
       width: 10px; height: 10px;
       border-radius: 50%;
@@ -328,10 +298,7 @@
       cursor: pointer;
       transition: background .3s, transform .2s;
     }
-    .dot.active {
-      background: var(--rose);
-      transform: scale(1.3);
-    }
+    .dot.active { background: var(--rose); transform: scale(1.3); }
     .carousel-counter {
       text-align: center;
       margin-top: 10px;
@@ -341,9 +308,7 @@
     }
 
     /* ── REASONS ── */
-    #reasons {
-      background: linear-gradient(160deg, #fff0f7 0%, #f0f4ff 100%);
-    }
+    #reasons { background: linear-gradient(160deg, #fff0f7 0%, #f0f4ff 100%); }
     .reasons-list {
       max-width: 600px;
       width: 100%;
@@ -472,12 +437,7 @@
       width: 100%; height: 100%;
       pointer-events: none; z-index: 999;
     }
-    .yes-photos {
-      display: flex;
-      gap: 18px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .yes-photos { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
     .yes-photo-block { display: flex; flex-direction: column; align-items: center; }
 
     /* ── SPARKLE TRAIL ── */
@@ -504,16 +464,13 @@
       overflow: hidden;
       position: relative;
     }
-    .ribbon-inner {
-      display: inline-block;
-      animation: ribbonScroll 22s linear infinite;
-    }
+    .ribbon-inner { display: inline-block; animation: ribbonScroll 22s linear infinite; }
     @keyframes ribbonScroll {
       from { transform: translateX(100vw); }
       to   { transform: translateX(-100%); }
     }
 
-    /* ── CAKE ANIMATION ── */
+    /* ── CAKE ── */
     .cake-wrap {
       font-size: 5rem;
       animation: cakePulse 1.5s ease-in-out infinite;
@@ -524,12 +481,7 @@
       50%      { transform: scale(1.15) rotate(3deg); }
     }
 
-    .music-control {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 1000;
-    }
+    .music-control { position: fixed; bottom: 2rem; right: 2rem; z-index: 1000; }
     #musicBtn {
       width: 60px; height: 60px;
       border-radius: 50%;
@@ -543,10 +495,7 @@
       align-items: center;
       justify-content: center;
     }
-    #musicBtn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 30px rgba(255,107,157,0.7);
-    }
+    #musicBtn:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(255,107,157,0.7); }
     #musicBtn.playing { animation: pulse 1.5s ease infinite; }
     @keyframes pulse {
       0%,100% { box-shadow: 0 5px 20px rgba(255,107,157,0.5); }
@@ -558,7 +507,6 @@
     ::-webkit-scrollbar-track { background: var(--cream); }
     ::-webkit-scrollbar-thumb { background: var(--pink); border-radius: 10px; }
 
-    /* ── NOTE BANNER (image numbering guide) ── */
     .swap-note {
       max-width: 640px;
       margin: 0 auto 30px;
@@ -575,9 +523,7 @@
       .heart-float, .named-heart, .sparkle, .ribbon-inner, .hero-photo, .cake-wrap, .proposal-photo { animation: none; }
     }
 
-    /* ════════════════════════════════════
-       MOBILE RESPONSIVE FIXES
-    ════════════════════════════════════ */
+    /* ── MOBILE ── */
     @media (max-width: 600px) {
       .hero-photo { width: 150px; height: 150px; }
       .hero-title { font-size: clamp(1.6rem, 8vw, 2.4rem); line-height: 1.3; }
@@ -602,7 +548,6 @@
       .carousel-next { right: -16px; }
       .carousel-btn { width: 38px; height: 38px; font-size: 1.1rem; }
     }
-
     @media (max-width: 380px) {
       .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 14px 8px; }
       .hero-photo { width: 130px; height: 130px; }
@@ -611,10 +556,8 @@
 </head>
 <body>
 
-<!-- ░░ FLOATING HEARTS BACKGROUND ░░ -->
 <div id="hearts-bg"></div>
 
-<!-- ░░ RIBBON ░░ -->
 <div class="ribbon">
   <span class="ribbon-inner">
     🎀 Happy Birthday Beautiful 🎀 &nbsp;&nbsp;&nbsp;
@@ -625,7 +568,6 @@
   </span>
 </div>
 
-<!-- ░░ HERO ░░ -->
 <section id="hero">
   <img class="hero-photo" id="hero-photo" src="./images/1.jpg" alt="gappu"/>
   <p class="photo-caption">You grabbed my heart 💘</p>
@@ -635,58 +577,47 @@
   <div class="scroll-hint">Scroll down before someone from the office walks by 👀</div>
 </section>
 
-<!-- ░░ BIRTHDAY WISHES ░░ -->
 <section id="wishes">
   <h2 class="section-title">🎁 Birthday Wishes For You</h2>
   <div class="cards-grid">
-
     <div class="wish-card" style="animation-delay:.1s">
       <span class="emoji">🤫</span>
       <h3>Our Office Secret 🫣</h3>
       <p>How we can talk for hours on calls or chats, and nobody in the office even knows that we talk. How romantic is that? 🤭</p>
     </div>
-
     <div class="wish-card" style="animation-delay:.2s">
       <span class="emoji">😤</span>
       <h3>Getting Scolded By You</h3>
       <p>You get mad at me over the smallest things, and somehow I still end up smiling through the whole lecture. Only you can scold me and make it sound like a love song 😋.</p>
     </div>
-
     <div class="wish-card" style="animation-delay:.3s">
       <span class="emoji">🩺</span>
       <h3>This Memory-Loss Disease</h3>
       <p>You keep saying, “Bhul gaye, doctor ko dikhao, bhulakkad badtameez aadmi” — and somehow, I’m addicted to hearing it now. Keep calling me these things; I’ll happily forget everything else in the world just to keep hearing you say them. ❤️</p>
     </div>
-
     <div class="wish-card" style="animation-delay:.4s">
       <span class="emoji">🤍</span>
       <h3>Speaking Power: Unlimited</h3>
       <p>I love your bak-bak so much, I could listen to you 24 hours a day, 7 days a week, 30 days a month, 365 days a year — for a lifetime. Please, never let it stop. 🫶</p>
     </div>
-
     <div class="wish-card" style="animation-delay:.5s">
       <span class="emoji">⏳</span>
       <h3>The Gap That Doesn't Matter</h3>
       <p>Age is just a number — what actually matters is how good we look together. And okay fine, you look a little older than your age 😜 and I look younger 😎.</p>
     </div>
-
     <div class="wish-card" style="animation-delay:.6s">
       <span class="emoji">🛗</span>
       <h3>Corridor Strangers, Chat Best Buddies</h3>
       <p>In the office hallway we're basically two people with excellent eye-contact-avoidance skills. On chat, we're basically inseparable. One of these needs fixing, gappu, and it's definitely not the second one.</p>
     </div>
-
   </div>
 </section>
 
-<!-- ░░ GALLERY ░░ -->
 <section id="gallery">
   <h2 class="section-title">📸 Sweet Memories</h2>
-  <!-- <p class="swap-note">This section loads 5.jpg through 16.jpg from the same folder as index.html.</p> -->
   <div class="gallery-grid" id="gallery-grid"></div>
 </section>
 
-<!-- ░░ CAROUSEL SECTION ░░ -->
 <section id="carousel-section">
   <h2 class="section-title">🎠 Your Special Moments</h2>
   <div class="carousel-wrapper">
@@ -699,7 +630,6 @@
   </div>
 </section>
 
-<!-- ░░ REASONS ░░ -->
 <section id="reasons">
   <h2 class="section-title">💝 Why I Fall For You</h2>
   <div class="reasons-list">
@@ -714,7 +644,6 @@
   </div>
 </section>
 
-<!-- ░░ PROPOSAL ░░ -->
 <section id="proposal">
   <div class="cake-wrap">🎂</div>
   <img class="proposal-photo" id="proposal-photo" src="./images/2.jpg" alt="Karishma"/>
@@ -735,7 +664,6 @@
   <p id="no-taunt" style="margin-top:20px;color:#c56cd6;font-family:'Dancing Script',cursive;font-size:1.2rem;min-height:30px;"></p>
 </section>
 
-<!-- ░░ YES SCREEN ░░ -->
 <section id="yes-screen">
   <canvas class="confetti-burst" id="confetti-canvas"></canvas>
   <div class="cake-wrap">🥳</div>
@@ -771,15 +699,14 @@
   <button id="musicBtn" onclick="toggleMusic()" aria-label="Toggle birthday song">🔇</button>
 </div>
 
-<!-- Birthday audio: place bday.mp3 in the same folder as this index.html -->
+<!-- Only your own audio: bday.mp3 in the same folder as index.html -->
 <audio id="bday-audio" loop preload="auto">
   <source src="bday.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-  /* ── GALLERY & CAROUSEL: real numbered photos (1.jpg, 2.jpg, ... in the same folder as index.html) ── */
-  const GALLERY_START = 5;   // gallery uses 5.jpg .. 16.jpg (12 photos)
-  const CAROUSEL_START = 17; // carousel uses 17.jpg .. 24.jpg (8 photos)
+  const GALLERY_START = 5;   // gallery uses 5.jpg .. 16.jpg
+  const CAROUSEL_START = 17; // carousel uses 17.jpg .. 24.jpg
 
   /* ── FLOATING HEARTS ── */
   const heartEmojis = ['💖','💕','🌸','💗','✨','🌷','💝','🦋','🌟','💘'];
@@ -800,10 +727,10 @@
   setInterval(spawnHeart, 400);
   for (let i = 0; i < 15; i++) spawnHeart();
 
-  /* ── NAMED HEARTS (different sizes, her name inside each, continuous bottom-to-top flow) ── */
+  /* ── NAMED HEARTS ── */
   const HEART_NAME = 'Kishuu';
   function spawnNamedHeart() {
-    const size = 26 + Math.random() * 46; // px, varying sizes
+    const size = 26 + Math.random() * 46;
     const el = document.createElement('div');
     el.className = 'named-heart';
     el.style.left = Math.random() * 92 + 'vw';
@@ -822,9 +749,7 @@
     if (scrollHeartCooldown) return;
     scrollHeartCooldown = true;
     const count = 2 + Math.floor(Math.random() * 3);
-    for (let i = 0; i < count; i++) {
-      setTimeout(spawnNamedHeart, i * 90);
-    }
+    for (let i = 0; i < count; i++) setTimeout(spawnNamedHeart, i * 90);
     setTimeout(() => { scrollHeartCooldown = false; }, 260);
   }, { passive: true });
 
@@ -867,7 +792,7 @@
     observer.observe(el);
   });
 
-  /* ── BUILD GALLERY & CAROUSEL FROM REAL NUMBERED PHOTOS, WITH ROMANTIC CAPTIONS ── */
+  /* ── BUILD GALLERY & CAROUSEL ── */
   (function buildMedia() {
     const galleryEl = document.getElementById('gallery-grid');
     const galleryEmojis = ['💖','🌸','✨','💕','🎀','🦋','💗','🌷','💝','⭐','🥰','🤍'];
@@ -885,23 +810,20 @@
       "Too pretty for this office, honestly",
       "Basically my whole personality now"
     ];
-if (galleryEl) {
-  for (let i = 0; i < 12; i++) {
-    const n = GALLERY_START + i;
-    const card = document.createElement('div');
-
-    card.className = 'gallery-card';
-
-    card.innerHTML =
-      '<div class="gallery-item">' +
-        '<img src="./images/' + n + '.jpg" alt="Memory ' + (i + 1) + '" loading="lazy"/>' +
-        '<div class="overlay">' + galleryEmojis[i % galleryEmojis.length] + '</div>' +
-      '</div>' +
-      '<p class="gallery-caption">' + galleryCaptions[i] + '</p>';
-
-    galleryEl.appendChild(card);
-  }
-}
+    if (galleryEl) {
+      for (let i = 0; i < 12; i++) {
+        const n = GALLERY_START + i;
+        const card = document.createElement('div');
+        card.className = 'gallery-card';
+        card.innerHTML =
+          '<div class="gallery-item">' +
+            '<img src="./images/' + n + '.jpg" alt="Memory ' + (i + 1) + '" loading="lazy"/>' +
+            '<div class="overlay">' + galleryEmojis[i % galleryEmojis.length] + '</div>' +
+          '</div>' +
+          '<p class="gallery-caption">' + galleryCaptions[i] + '</p>';
+        galleryEl.appendChild(card);
+      }
+    }
 
     const captions = [
       "Maasi by relation, best friend by heart. 🤍",
@@ -920,18 +842,15 @@ if (galleryEl) {
     const nextBtn = carouselTrack.querySelector('.carousel-next');
     carouselTrack.removeChild(prevBtn);
     carouselTrack.removeChild(nextBtn);
-captions.forEach((cap, i) => {
-  const n = CAROUSEL_START + i;
-  const div = document.createElement('div');
-
-  div.className = 'carousel-slide' + (i === 0 ? ' active' : '');
-
-  div.innerHTML =
-    '<img src="./images/' + n + '.jpg" alt="Moment ' + (i + 1) + '" loading="lazy"/>' +
-    '<div class="carousel-caption">' + cap + '</div>';
-
-  carouselTrack.appendChild(div);
-});
+    captions.forEach((cap, i) => {
+      const n = CAROUSEL_START + i;
+      const div = document.createElement('div');
+      div.className = 'carousel-slide' + (i === 0 ? ' active' : '');
+      div.innerHTML =
+        '<img src="./images/' + n + '.jpg" alt="Moment ' + (i + 1) + '" loading="lazy"/>' +
+        '<div class="carousel-caption">' + cap + '</div>';
+      carouselTrack.appendChild(div);
+    });
     carouselTrack.appendChild(prevBtn);
     carouselTrack.appendChild(nextBtn);
   })();
@@ -958,17 +877,14 @@ captions.forEach((cap, i) => {
     document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
     counter.textContent = (currentSlide + 1) + ' / ' + total;
   }
-
   function changeSlide(dir) {
     currentSlide = (currentSlide + dir + total) % total;
     updateCarousel();
   }
-
   function goToSlide(n) {
     currentSlide = n;
     updateCarousel();
   }
-
   setInterval(() => changeSlide(1), 4000);
 
   let touchStartX = 0;
@@ -981,7 +897,7 @@ captions.forEach((cap, i) => {
     if (Math.abs(diff) > 40) changeSlide(diff > 0 ? 1 : -1);
   }, { passive: true });
 
-  /* ── NO BUTTON: dodges the cursor/finger and never overlaps the Yes button ── */
+  /* ── NO BUTTON: dodges and never overlaps Yes ── */
   const taunts = [
     "That button also needs the doctor's checkup 🩺",
     "Oops! That button is shy 😏",
@@ -1001,7 +917,6 @@ captions.forEach((cap, i) => {
   function rectsOverlap(ax, ay, aw, ah, bx, by, bw, bh) {
     return ax < bx + bw && ax + aw > bx && ay < by + bh && ay + ah > by;
   }
-
   function getYesExclusionBox(wrapRect) {
     const yesRect = yesBtn.getBoundingClientRect();
     const margin = 22;
@@ -1012,7 +927,6 @@ captions.forEach((cap, i) => {
       h: yesRect.height + margin * 2
     };
   }
-
   function pickNonOverlappingPos() {
     const wrapRect = btnWrap.getBoundingClientRect();
     const btnW = noBtn.offsetWidth || 90;
@@ -1048,13 +962,11 @@ captions.forEach((cap, i) => {
     }
     return { left, top };
   }
-
   function placeNoBtnInitial() {
     const pos = pickNonOverlappingPos();
     noBtn.style.left = pos.left + 'px';
     noBtn.style.top = pos.top + 'px';
   }
-
   function dodgeNoBtn(e) {
     if (e && e.cancelable) e.preventDefault();
     const pos = pickNonOverlappingPos();
@@ -1063,11 +975,9 @@ captions.forEach((cap, i) => {
     document.getElementById('no-taunt').textContent = taunts[tauntIdx % taunts.length];
     tauntIdx = (tauntIdx + 1) % taunts.length;
   }
-
   ['mouseenter', 'pointerdown', 'touchstart', 'focus', 'click'].forEach(evt => {
     noBtn.addEventListener(evt, dodgeNoBtn, { passive: false });
   });
-
   window.addEventListener('load', placeNoBtnInitial);
   window.addEventListener('resize', placeNoBtnInitial);
   placeNoBtnInitial();
@@ -1119,67 +1029,9 @@ captions.forEach((cap, i) => {
     draw();
   }
 
-  /* ── MUSIC: bday.mp3 in the same folder, with a synthesized fallback if it's missing ── */
-  const AudioCtx = window.AudioContext || window.webkitAudioContext;
-  let actx = null;
+  /* ── MUSIC: plays ONLY bday.mp3 from the same folder as index.html ── */
   let musicPlaying = false;
-  let musicTimer = null;
-  let usingFallback = false;
   const audioEl = document.getElementById('bday-audio');
-
-  const NOTE_FREQ = {
-    C4: 261.63, D4: 293.66, E4: 329.63, F4: 349.23, G4: 392.00,
-    A4: 440.00, A_4: 466.16, C5: 523.25
-  };
-  const melody = [
-    ['C4', 0.4], ['C4', 0.25], ['D4', 0.65], ['C4', 0.65], ['F4', 0.65], ['E4', 1.3],
-    ['C4', 0.4], ['C4', 0.25], ['D4', 0.65], ['C4', 0.65], ['G4', 0.65], ['F4', 1.3],
-    ['C4', 0.4], ['C4', 0.25], ['C5', 0.65], ['A4', 0.65], ['F4', 0.65], ['E4', 0.65], ['D4', 1.3],
-    ['A_4', 0.4], ['A_4', 0.25], ['A4', 0.65], ['F4', 0.65], ['G4', 0.65], ['F4', 1.3]
-  ];
-
-  function scheduleMelody(startDelay) {
-    if (!actx) actx = new AudioCtx();
-    let t = actx.currentTime + startDelay;
-    let totalDur = 0;
-    melody.forEach(note => {
-      const freq = NOTE_FREQ[note[0]];
-      const dur = note[1] * 0.42;
-      const osc = actx.createOscillator();
-      const gain = actx.createGain();
-      osc.type = 'sine';
-      osc.frequency.value = freq;
-      gain.gain.setValueAtTime(0, t);
-      gain.gain.linearRampToValueAtTime(0.2, t + 0.04);
-      gain.gain.linearRampToValueAtTime(0.0001, t + dur);
-      osc.connect(gain);
-      gain.connect(actx.destination);
-      osc.start(t);
-      osc.stop(t + dur + 0.05);
-      t += dur;
-      totalDur += dur;
-    });
-    return totalDur;
-  }
-
-  function loopFallbackMelody() {
-    if (!musicPlaying || !usingFallback) return;
-    const dur = scheduleMelody(0.05);
-    musicTimer = setTimeout(loopFallbackMelody, (dur + 0.4) * 1000);
-  }
-
-  function startFallback() {
-    usingFallback = true;
-    if (!AudioCtx) return;
-    if (!actx) actx = new AudioCtx();
-    if (actx.state === 'suspended') actx.resume();
-    loopFallbackMelody();
-  }
-
-  function stopFallback() {
-    usingFallback = false;
-    if (musicTimer) clearTimeout(musicTimer);
-  }
 
   function updateMusicBtn(playing) {
     const btn = document.getElementById('musicBtn');
@@ -1188,12 +1040,16 @@ captions.forEach((cap, i) => {
   }
 
   function playMusic() {
-    musicPlaying = true;
-    updateMusicBtn(true);
-    audioEl.currentTime = 0;
     const p = audioEl.play();
     if (p !== undefined) {
-      p.catch(() => { startFallback(); });
+      p.then(() => {
+        musicPlaying = true;
+        updateMusicBtn(true);
+      }).catch(() => {
+        // Autoplay blocked; the first tap/click/scroll will start it
+        musicPlaying = false;
+        updateMusicBtn(false);
+      });
     }
   }
 
@@ -1201,35 +1057,32 @@ captions.forEach((cap, i) => {
     musicPlaying = false;
     updateMusicBtn(false);
     audioEl.pause();
-    stopFallback();
   }
 
   function toggleMusic() {
     musicPlaying ? pauseMusic() : playMusic();
   }
 
-  audioEl.addEventListener('error', () => {
-    if (musicPlaying) startFallback();
-  });
+  // Try to start on load (only works if the browser allows autoplay)
+  document.addEventListener('DOMContentLoaded', () => { playMusic(); });
 
-  // Try to start on load (works if the browser allows it); otherwise the button starts it.
-  document.addEventListener('DOMContentLoaded', () => { try { playMusic(); } catch (e) {} });
-
-  // Browsers block real autoplay until the visitor interacts with the page at least once.
-  // So the instant she taps, clicks, scrolls, or presses any key, the song kicks in automatically.
+  // Browsers block autoplay until the visitor interacts once, so the song
+  // starts on the first tap, click, scroll or key press.
   (function primeAutoplayOnFirstInteraction() {
-    let started = false;
-    function startOnce() {
-      if (started || musicPlaying) return;
-      started = true;
-      try { playMusic(); } catch (e) {}
-      ['pointerdown', 'touchstart', 'click', 'keydown', 'scroll'].forEach(evt =>
-        window.removeEventListener(evt, startOnce)
-      );
+    const events = ['pointerdown', 'touchstart', 'click', 'keydown', 'scroll'];
+    function startOnce(e) {
+      // Don't fight the music button: let toggleMusic handle its own clicks
+      if (e && e.target && e.target.closest && e.target.closest('#musicBtn')) {
+        events.forEach(evt => window.removeEventListener(evt, startOnce));
+        return;
+      }
+      if (musicPlaying) {
+        events.forEach(evt => window.removeEventListener(evt, startOnce));
+        return;
+      }
+      playMusic();
     }
-    ['pointerdown', 'touchstart', 'click', 'keydown', 'scroll'].forEach(evt =>
-      window.addEventListener(evt, startOnce, { passive: true, once: false })
-    );
+    events.forEach(evt => window.addEventListener(evt, startOnce, { passive: true }));
   })();
 </script>
 </body>
